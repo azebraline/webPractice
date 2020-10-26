@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 400px;
+            /* 图片先放到一个地方，会根据父元素移动改变位置 */
+            position:absolute;
+            left: 0;
+            top: 0;
+        }
+        /* 规定一下div大小和图片一样 是参照物 */
+        div{
+            /* div是承装图片的盒子，照片是3D效果，就需要给承装所有图片的盒子也设置成3D效果 */
+            transform-style: preserve-3d; /* 设置3D效果 */
+            width: 300px;
+            height: 400px;
+            background:red;
+            position:absolute;
+            left: 0;right: 0;
+            top: 0;bottom: 0;
+            margin: auto;
+            animation: rotating 10s linear infinite;
+        }
+        /* 要做12面相册 所以每个面递增30 度 */
+        img:nth-of-type(1){
+            transform: rotateY(30deg)translateZ(600px);
+        }
+        img:nth-of-type(2){
+            transform: rotateY(60deg)translateZ(600px);
+        }
+        img:nth-of-type(3){
+            transform: rotateY(90deg)translateZ(600px);
+        }
+        img:nth-of-type(4){
+            transform: rotateY(120deg)translateZ(600px);
+        }
+        img:nth-of-type(5){
+            transform: rotateY(150deg)translateZ(600px);
+        }
+        img:nth-of-type(6){
+            transform: rotateY(180deg)translateZ(600px);
+        }
+        img:nth-of-type(7){
+            transform: rotateY(210deg)translateZ(600px);
+        }
+        img:nth-of-type(8){
+            transform: rotateY(240deg)translateZ(600px);
+        }
+        img:nth-of-type(9){
+            transform: rotateY(270deg)translateZ(600px);
+        }
+        img:nth-of-type(10){
+            transform: rotateY(300deg)translateZ(600px);
+        }
+        img:nth-of-type(11){
+            transform: rotateY(330deg)translateZ(600px);
+        }
+        img:nth-of-type(12){
+            transform: rotateY(360deg)translateZ(600px);
+        }
+        @keyframes rotating {
+          from {
+            transform: rotateY(0deg) rotateX(5deg);
+          }
+          to {
+            transform: rotateY(360deg) rotateX(5deg);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="image/0.jpeg" alt="">
+        <img src="image/1.jpeg" alt="">
+        <img src="image/2.jpeg" alt="">
+        <img src="image/3.jpeg" alt="">
+        <img src="image/4.jpeg" alt="">
+        <img src="image/1.jpeg" alt="">
+        <img src="image/2.jpeg" alt="">
+        <img src="image/3.jpeg" alt="">
+        <img src="image/4.jpeg" alt="">
+        <img src="image/1.jpeg" alt="">
+        <img src="image/3.jpeg" alt="">
+        <img src="image/2.jpeg" alt="">
+
+    </div>
+</body>
+</html>

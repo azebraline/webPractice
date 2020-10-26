@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>动画轮播</title>
+    <style>
+        img{
+            width: 1000px;
+            height: 500px;
+            float: left; /* 图片在wrapper里面展现无缝隙 */
+        }
+        .wrapper{
+            /* 为了承载图片 设置一下大小 */
+            width: 2000px;
+            height: 5000px;
+            /* 第二步添加动画 animation 动画名字 时长 速率 次数 */
+            transform: translate(0px);
+            animation: lunbo 4s steps(2) infinite; 
+        }
+        /* 展现的窗口banner跟突变大小一样 */
+        #banner{
+            width: 1000px;
+            height: 500px;
+            /* 水平居中浏览器 */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        /* 第一步 关键帧 创建动画  让我们知道变成什么样 怎么变 */
+        @keyframes lunbo {
+            0%{transform: translate(0px);}
+            100%{transform: translate(-2000px);}/* 直接写0% 100% 中间不需要写 然后用图片长度图片数 即100%时数值 */
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+       <div class="wrapper">
+        <img src="../image/0.jpeg" alt="">
+        <img src="../image/1.jpeg" alt="">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3动画</title>
+  <style>
+      div{
+          width: 300px;
+          height: 300px;
+          background: aquamarine;
+          transition: 2s;
+
+      }
+      div:hover{
+          width: 400px;
+          height: 100px;
+          background: aqua;
+
+      }
+      img{
+          width: 600px;
+          height: 400px;
+          transition: 2s;
+
+      }
+      img:hover{
+       /*  缩放 */
+       /* 变大变小可为负值 */
+       /* transform: scale(-1); */
+       /* 旋转，分 x y z 轴  单位度 deg*/
+       /* transform: rotate(36000deg); */
+       /* transform: rotateX(30000deg); */
+       /* transform: rotateY(300deg); */
+       transform: skewX(300deg);
+       transform: translate(100);
+      }
+  </style>
+</head>
+<body>
+    <div></div>
+    <img src="image/0.jpeg" alt="">
+</body>
+</html>
